@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <h1>වීඩියෝ නරඹන්න</h1>
+    <div>
+        <button class="category-btn" onclick="loadVideos('gay')">Gay</button>
+        <button class="category-btn" onclick="loadVideos('lesbian')">Lesbian</button>
+        <button class="category-btn" onclick="loadVideos('straight')">Straight</button>
+    </div>
+    <div id="videoContainer" class="video-container"></div>
+
+    <h2>Payment එක ගෙවන්න</h2>
+    <p>බැංකු ගිණුම: <span id="bankDetails"></span></p>
+    <input type="file" id="bankSlip" accept="image/*">
+    <button onclick="uploadBankSlip()">Upload Bank Slip</button>
+
+    <script src="user.js"></script>
+</body>
+</html>
