@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <script>
+        const password = prompt("Owner password ඇතුලත් කරන්න:");
+        if (password !== "your-secret-password") { // ඔබේ password එක මෙතන change කරන්න
+            alert("Incorrect password!");
+            window.location.href = "index.html";
+        }
+    </script>
+    <h1>Owner Dashboard</h1>
+    <h2>Bank Details ඇතුළත් කරන්න</h2>
+    <input type="text" id="bankName" placeholder="බැංකුවේ නම">
+    <input type="text" id="accountNumber" placeholder="ගිණුම් අංකය">
+    <button onclick="saveBankDetails()">Save</button>
+
+    <h2>වීඩියෝ උඩුගත කරන්න</h2>
+    <input type="text" id="videoUrl" placeholder="Video URL (Vimeo/Vidyard)">
+    <select id="category">
+        <option value="gay">Gay</option>
+        <option value="lesbian">Lesbian</option>
+        <option value="straight">Straight</option>
+    </select>
+    <select id="accessType">
+        <option value="free">Free</option>
+        <option value="paid">Paid</option>
+    </select>
+    <button onclick="uploadVideo()">Upload Video</button>
+
+    <script src="owner.js"></script>
+</body>
+</html>
